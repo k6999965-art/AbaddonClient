@@ -14,7 +14,7 @@ import kotlin.concurrent.thread
 
 class MainActivity : Activity() {
 
-    private val serverUrl = "https://YOUR_SERVER/api/register"
+    private val serverUrl = "http://127.0.0.1:8080"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
