@@ -14,7 +14,7 @@ import kotlin.concurrent.thread
 
 class MainActivity : Activity() {
 
-    private val serverUrl = "http://127.0.0.1:5000/health"
+    private val serverUrl = "http://127.0.0.1:5000/api/register"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,13 +89,13 @@ class MainActivity : Activity() {
                 val data = JSONObject().apply {
                     put("device_id", "my-android-device")
                     put("model", android.os.Build.MODEL)
-                    put("android", android.os.Build.VERSION.RELEASE)
+                    put("android_version", android.os.Build.VERSION.RELEASE)
                     put("battery", battery.coerceIn(0, 100))
                     put("network", "Connected")
                 }
 
                 val connection = URL(serverUrl)
-                    .openConnection() as HttpsURLConnection
+    .openConnection() as java.net.HttpURLConnection
 
                 connection.requestMethod = "POST"
                 connection.connectTimeout = 10000
