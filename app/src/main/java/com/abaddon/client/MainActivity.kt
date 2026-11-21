@@ -1,6 +1,6 @@
 
 package com.abaddon.client
-
+import android.app.AlertDialog
 import android.app.Activity
 import android.os.Bundle
 import android.os.BatteryManager
