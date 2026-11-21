@@ -14,7 +14,7 @@ import kotlin.concurrent.thread
 
 class MainActivity : Activity() {
 
-    private val serverUrl = "http://127.0.0.1:8080"
+    private val serverUrl = "http://127.0.0.1:5000/health"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
